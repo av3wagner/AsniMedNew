@@ -525,8 +525,12 @@ def demo_explanation(File):
         html.Div([dcc.Markdown(demo_md, className="markdown")]),
         style={"margin": "20px"},
     )
+  
+#server = Flask(__name__) # define flask app.server
+#app = dash.Dash(__name__,server=server,)
 
 app = JupyterDash(external_stylesheets=[dbc.themes.SLATE])
+server = app.server
 sidebar = html.Div(
     [
         html.Div(
@@ -553,6 +557,7 @@ sidebar = html.Div(
     ],
     style=SIDEBAR_STYLE,
 )
+
 dash._dash_renderer._set_react_version("18.2.0")
 #Dash._dash_renderer._set_react_version("18.2.0")
 content = html.Div(id="page-content", style=CONTENT_STYLE)
