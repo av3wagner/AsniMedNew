@@ -31,19 +31,26 @@
 cwd = os.getcwd() 
 def RunEda():
     import time
-    path= 
-    exec(open(r"/ImportBib.py").read(), globals())
+    path=os.path.join(cwd, "ImportBib.py")
+    #exec(open(r"/ImportBib.py").read(), globals())
+    exec(open(path).read(), globals())
     time.sleep(2.0)
-    
-    exec(open(r"/ConfigINI2025.py").read(), globals())
+
+    path=os.path.join(cwd, "ConfigINI2025.py")
+    #exec(open(r"/ConfigINI2025.py").read(), globals())
+     exec(open(path).read(), globals())
     import time
     time.sleep(2.0)
-              
-    exec(open(r"/AsniDef.py").read(), globals())
+
+    path=os.path.join(cwd, "AsniDef.py")
+    #exec(open(r"/AsniDef.py").read(), globals())
+     exec(open(path).read(), globals())
     import time
     time.sleep(2.0)
     
-    exec(open(r"/AsniMed\AsNiDefFa2.py").read(), globals())
+    path=os.path.join(cwd, "AsNiDefFa2.py")
+    #exec(open(r"\AsNiDefFa2.py").read(), globals())
+    exec(open(path).read(), globals())
     import time
     time.sleep(2.0)
     
