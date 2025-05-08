@@ -3,8 +3,8 @@
 altair>=5.1.2
 beautifulsoup4>=4.4.1
 bs4>=0.0.2
-conda-repo-cli>=1.0.75
-conda-verify>=3.4.2
+#conda-repo-cli>=1.0.75
+#conda-verify>=3.4.2
 chart-studio>=1.1.0
 click>=8.1.7
 clipboard>=0.1.5
