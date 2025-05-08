@@ -117,3 +117,4 @@ xhtml2pdf>=0.2.13
 XlsxWriter>=3.2.0
 #ydata-profiling>=4.6.4
 #yfinance>=0.2.26
+#pip >= 25.1.1
