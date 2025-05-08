@@ -379,12 +379,10 @@ from dash import Input, Output, dcc, html
 import pandas as pd
 import numpy as np
 import sqlite3
-import dash
 from dash import dash_table
-from dash import dcc
-from dash import html
 import dash_bootstrap_components as dbc
-import dash_html_components as html
+#import dash_html_components as html
+from dash import Dash, html, dcc
 from dash.dependencies import Input, Output
 from dash import Dash, dcc, html, Input, Output, State, callback
 import plotly.express as px
@@ -426,7 +424,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import time
 import psutil
-from AppOpener import close
+#from AppOpener import close
 import dash_pdf
 from dash import Dash, html, dcc, Input, Output, State
 
@@ -558,8 +556,8 @@ sidebar = html.Div(
     ],
     style=SIDEBAR_STYLE,
 )
-
-dash._dash_renderer._set_react_version("18.2.0")
+#dash._dash_renderer._set_react_version("18.2.0")
+Dash._dash_renderer._set_react_version("18.2.0")
 content = html.Div(id="page-content", style=CONTENT_STYLE)
 app.title = "RK Asni-Med"
 app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
