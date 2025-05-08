@@ -105,8 +105,8 @@ tasks>=2.8.0
 tensorboard-data-server>=0.7.1
 tensorflow>=2.13.0
 tensorflow-estimator>=2.13.0
-tensorflow-intel>=2.13.0
-tensorflow-io-gcs-filesystem>=0.31.0
+tensorflow-intel
+tensorflow-io-gcs-filesystem
 toml>=0.10.2
 weasyprint>=60.2
 webcolors>=1.13
