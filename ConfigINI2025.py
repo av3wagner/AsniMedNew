@@ -12,7 +12,7 @@ config = ConfigParser()
 now=datetime.datetime.now()
 timestart = now.replace(microsecond=0)
 print("Programm Start: ", timestart)
-cwd = 'C:\AW75\AsniMed'
+cwd = os.getcwd() #'C:\AW75\AsniMed'
 DirPr = cwd
 DirData=os.path.join(cwd, "data")
 DirAssets=os.path.join(cwd, "ASSETS")
