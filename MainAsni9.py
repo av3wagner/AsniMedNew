@@ -375,14 +375,11 @@ Genikol = """
 
 import dash
 import dash_bootstrap_components as dbc
-from dash import Input, Output, dcc, html
 import pandas as pd
 import numpy as np
 import sqlite3
 from dash import dash_table
 import dash_bootstrap_components as dbc
-#import dash_html_components as html
-from dash import Dash, html, dcc
 from dash.dependencies import Input, Output
 from dash import Dash, dcc, html, Input, Output, State, callback
 import plotly.express as px
@@ -396,14 +393,12 @@ from urllib.request import urlopen
 from prophet import Prophet
 from pandas_datareader import data, wb
 import base64
-
 import os, sys, inspect, time, datetime
 import subprocess
 import json
 from time import time, strftime, localtime
 from datetime import timedelta
 import shutil
-
 from subprocess import Popen, PIPE, STDOUT
 import sys
 import webbrowser
@@ -412,7 +407,6 @@ from configparser import ConfigParser
 import streamlit as st
 import matplotlib.pyplot as plt
 from IPython.display import IFrame
-
 from dash import Dash, dcc, html, callback, Input, Output
 import dash_bootstrap_components as dbc
 import plotly.express as px
@@ -424,9 +418,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import time
 import psutil
-#from AppOpener import close
 import dash_pdf
 from dash import Dash, html, dcc, Input, Output, State
+
+#import dash_html_components as html
+#from dash import Dash, html, dcc
+#from AppOpener import close
 
 path=os.getcwd()
 os.chdir(path)
@@ -556,8 +553,8 @@ sidebar = html.Div(
     ],
     style=SIDEBAR_STYLE,
 )
-#dash._dash_renderer._set_react_version("18.2.0")
-Dash._dash_renderer._set_react_version("18.2.0")
+dash._dash_renderer._set_react_version("18.2.0")
+#Dash._dash_renderer._set_react_version("18.2.0")
 content = html.Div(id="page-content", style=CONTENT_STYLE)
 app.title = "RK Asni-Med"
 app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
