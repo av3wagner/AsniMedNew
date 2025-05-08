@@ -909,9 +909,10 @@ def update_output_div(input_value):
         return f"assets/AsNiML_Kurz.html" 
     
     elif input_value == "C:\IPYNBgesamt2025\AsFenForum2025\EDA-Report2025.py":
-        print("Start: C:\\AW75\\AsniMed\\EDA-Report2025.py")
+        #print("Start: C:\\AW75\\AsniMed\\EDA-Report2025.py")
         #exec(open("C:\AW75\AsniMed\EDAmodReport2025.py", encoding="utf-8").read())
-        exec(open("/EDAmodReport2025.py", encoding="utf-8").read())
+        #/opt/render/project/src/MainAsni9.py", 
+        exec(open("/opt/render/project/src/EDAmodReport2025.py", encoding="utf-8").read())
         return f"assets/EDA_ChartFinal.html"  
          
     elif input_value == "C:\IPYNBgesamt2025\AsFenForum2025\ASNI-Reports2025.py":
