@@ -30,7 +30,7 @@ dash-table-experiments>=0.6.0
 dash-template-rendering>=0.0.1b5
 dash-tools
 dash_ag_grid>=31.0.1
-datapane
+#datapane
 #datashape>=0.5.4
 docx>=0.2.4
 docx2pdf>=0.1.8
@@ -110,10 +110,10 @@ tensorflow-io-gcs-filesystem
 toml>=0.10.2
 weasyprint>=60.2
 webcolors>=1.13
-webdriver-manager>=4.0.1
-wordcloud>=1.9.2
+#webdriver-manager>=4.0.1
+#wordcloud>=1.9.2
 xgboost>=1.7.6
 xhtml2pdf>=0.2.13
 XlsxWriter>=3.2.0
-ydata-profiling>=4.6.4
-yfinance>=0.2.26
+#ydata-profiling>=4.6.4
+#yfinance>=0.2.26
