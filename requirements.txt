@@ -115,6 +115,7 @@ webcolors>=1.13
 xgboost>=1.7.6
 xhtml2pdf>=0.2.13
 XlsxWriter>=3.2.0
+dash_pdf
 #ydata-profiling>=4.6.4
 #yfinance>=0.2.26
 #pip >= 25.1.1
