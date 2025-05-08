@@ -31,18 +31,18 @@
 
 def RunEda():
     import time
-    exec(open(r"C:\AW75\AsniMed\ImportBib.py").read(), globals())
+    exec(open(r"/ImportBib.py").read(), globals())
     time.sleep(2.0)
     
-    exec(open(r"C:\AW75\AsniMed\ConfigINI2025.py").read(), globals())
+    exec(open(r"/ConfigINI2025.py").read(), globals())
     import time
     time.sleep(2.0)
               
-    exec(open(r"C:\AW75\AsniMed\AsniDef.py").read(), globals())
+    exec(open(r"/AsniDef.py").read(), globals())
     import time
     time.sleep(2.0)
     
-    exec(open(r"C:\AW75\AsniMed\AsNiDefFa2.py").read(), globals())
+    exec(open(r"/AsniMed\AsNiDefFa2.py").read(), globals())
     import time
     time.sleep(2.0)
     
