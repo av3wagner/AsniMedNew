@@ -28,9 +28,10 @@
 #;;;* 27.08.2024        : #Funktioniert fehelefrei 10:24 Result:   *;;;
 #;;;*                   : #ASNI_ReportResultPa01_20240827OK.docx   *;;;
 #;;;****************************************************************;;;
-
+cwd = os.getcwd() 
 def RunEda():
     import time
+    path= 
     exec(open(r"/ImportBib.py").read(), globals())
     time.sleep(2.0)
     
