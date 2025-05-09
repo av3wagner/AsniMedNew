@@ -564,7 +564,7 @@ def render_page_content(pathname):
                 ),
                 html.Iframe(
                     id="my-output",
-                    src="assets/ASNI_ReportResult2025.html",
+                    src=" ",
                     style={'width':'99.5%',"height": '875px','display':'inline-block',
                     'backgroundColor': 'white',       
                     'overflow-y':'auto', 'color': 'yellow', "font-size": "1.4rem",
