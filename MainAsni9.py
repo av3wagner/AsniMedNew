@@ -427,7 +427,7 @@ from dash import Dash, html, dcc, Input, Output, State
 
 path=os.getcwd()
 os.chdir(path)
-print(path)
+print("MainAsni9.py: ", path)
 
 header_height, footer_height = "7rem", "10rem"
 sidebar_width, adbar_width = "12rem", "12rem"
