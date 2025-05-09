@@ -29,6 +29,7 @@
 #;;;*                   : #ASNI_ReportResultPa01_20240827OK.docx   *;;;
 #;;;****************************************************************;;;
 cwd = os.getcwd() 
+
 def RunEda():
     import time
     path=os.path.join(cwd, "ImportBib.py")
@@ -38,13 +39,13 @@ def RunEda():
 
     path=os.path.join(cwd, "ConfigINI2025.py")
     #exec(open(r"/ConfigINI2025.py").read(), globals())
-     exec(open(path).read(), globals())
+    exec(open(path).read(), globals())
     import time
     time.sleep(2.0)
 
     path=os.path.join(cwd, "AsniDef.py")
     #exec(open(r"/AsniDef.py").read(), globals())
-     exec(open(path).read(), globals())
+    exec(open(path).read(), globals())
     import time
     time.sleep(2.0)
     
