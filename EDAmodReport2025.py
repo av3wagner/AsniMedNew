@@ -30,28 +30,40 @@
 #;;;****************************************************************;;;
 cwd = os.getcwd() 
 
+def execute_python_file(file_path):
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            python_code = file.read()
+            exec(python_code)
+    except FileNotFoundError:
+        print(f"Error: The file '{file_path}' does not exist.")
+
 def RunEda():
     import time
     path=os.path.join(cwd, "ImportBib.py")
     #exec(open(r"/ImportBib.py").read(), globals())
-    exec(open(path).read(), globals())
+    #exec(open(path).read(), globals())
+    execute_python_file(path)	
     time.sleep(2.0)
 
     path=os.path.join(cwd, "ConfigINI2025.py")
     #exec(open(r"/ConfigINI2025.py").read(), globals())
-    exec(open(path).read(), globals())
+    #exec(open(path).read(), globals())
+    execute_python_file(path)	
     import time
     time.sleep(2.0)
 
     path=os.path.join(cwd, "AsniDef.py")
     #exec(open(r"/AsniDef.py").read(), globals())
-    exec(open(path).read(), globals())
+    #exec(open(path).read(), globals())
+    execute_python_file(path)	
     import time
     time.sleep(2.0)
     
     path=os.path.join(cwd, "AsNiDefFa2.py")
     #exec(open(r"\AsNiDefFa2.py").read(), globals())
-    exec(open(path).read(), globals())
+    #exec(open(path).read(), globals())
+    execute_python_file(path)	
     import time
     time.sleep(2.0)
     
