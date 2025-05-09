@@ -30,7 +30,7 @@ print("#;;;* 28.03.2025        : PDF Seite                                *;;;")
 print("#;;;* 31.03.2025        : Чистка                                   *;;;")
 print("#;;;* 04.04.2025        : Neue PDF-File                            *;;;")
 print("#;;;* 04.05.2025        : Revision                                 *;;;")
-print("#;;;* 08.05.2025        : Revision, Korrektur                      *;;;")
+print("#;;;* 09.05.2025        : Revision, Korrektur                      *;;;")
 print("#;;;****************************************************************;;;")
 
 def close_app(app_name):
