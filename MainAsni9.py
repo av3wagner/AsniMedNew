@@ -566,53 +566,7 @@ def render_page_content(pathname):
              ])            
          ]), 
     
-    elif pathname == "/page-9":
-        return html.Div([  
-                html.Div(   
-                  html.Iframe(
-                      sandbox='',
-                      srcDoc='''
-                      <!DOCTYPE html>
-                      <html lang="en"> 
-                       <html>
-                        <head>
-                            <style>
-                                .myDiv {border: 5 outset red; background-color: lightblue; text-align: center;}
-                            </style>
-                        </head>
-                        
-                        <body>
-                        <div class="myDiv">
-                          <h1> Выберите параметры проекта для старта </h1>
-                        </div>
-                        </body>
-                       </html> 
-                    ''',
-                     style={'width':'95.0%',"height": '65px','display':'inline-block',
-                           'overflow-y':'auto', 'color': 'yellow', "font-size": "1.4rem",
-                           'marginLeft':50, 'vertical-align':'middle'},
-                           className="four columns instruction",      
-           )), 
-        
-        html.Div([html.Label(['Информация о проектах'], style={'color': 'yellow'}),
-        dcc.Dropdown(id='SysInfo',
-                     multi=False,
-                     clearable=True,
-                     disabled=False,
-                     style={'display': True},
-                     value='Кардиология)',
-                     options=[{'label': i, 'value': i} for i in DocuList],
-                    )         
-
-         ],style={'width':'99.5%',"height": '40px', 'display':'inline-block',
-                    'overflow-y':'auto', 'color': 'black', "font-size": "1.0rem",
-                    'marginLeft':50, 'marginRight':1, 'vertical-align':'middle',
-                    'marginBottom':0,'marginTop':0, 'padding': '1px 1px 1px 1px'}
-         ),  
-
-        html.Div(id='container'),
-        ]) 
-        
+       
        #elif pathname == "/page-12":
        #   return html.Div([  
        #     close_app("firefox") 
@@ -657,47 +611,10 @@ def update_output_div(input_value):
         print(input_value)
         return f"assets/ASNI_ReportResult2025.html"  
 
-@app.callback(Output('container', 'children'),
-             Input('SysInfo', 'value')) 
- 
-def snapshot_page(value):
-    if value == 'Кардиология':
-        img=1
-        Text="Проект: Кардиология"
-        MDfile=Kardio
-        RunModul()
-    elif value == 'Диабетология':
-        img=1
-        Text="Проект: Диабетология"
-        MDfile=Diabet
-        RunModul()
-    elif value == 'Геникология':
-        img=1
-        Text="Проект: Мамография"
-        MDfile=Genikol
-        RunModul()
-        
-    if img==0:
-        return html.Div([
-            html.Div([
-            html.Div(id='tabs-div', children=[image], className='tab-div'), 
-            html.H1(children=Text, style={'color': 'white', 'textAlign': 'left', 'padding-left': 100}),
-            html.H1(children="x", style={'color': "#111111", 'textAlign': 'left', 'padding-left': 100, "font-size": "2.4rem", "line-height": "0.7em"}),            
-            html.Div([dcc.Markdown(children=MDfile)], style={'color': 'yellow', "font-size": "1.4rem", 'padding-left': 100, 'display': 'display-inblock'}),
-            ]),
-        ])
-    elif img==1:
-        return html.Div([
-            html.Div([
-            html.H1(children=Text, style={'color': 'white', 'textAlign': 'left', 'padding-left': 100, "font-size": "2.4rem"}),    
-            html.H1(children="x", style={'color': "#111111", 'textAlign': 'left', 'padding-left': 100, "font-size": "2.4rem", "line-height": "0.7em"}),            
-            html.Div([dcc.Markdown(children=MDfile)], style={'color': 'yellow', "font-size": "1.4rem", 'padding-left': 100, 'display': 'display-inblock'}),
-            html.Br()    
-            ]),
-        ])    
+#Seite 9
        
 if __name__ == "__main__":
-    app.run_server(debug=False, port=8087)   
+    app.run_server(debug=False, port=8083)   
 
 # AsniMLBericht-2025.pdf
 # AsNiML-Kurz.html
