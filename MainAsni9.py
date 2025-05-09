@@ -597,11 +597,12 @@ def update_output_div(input_value):
     print(input_value)
     if input_value == "ML-Reports2025.py":
         #exec(open("C:\AW75\AsniMed\MLReportsMod2025.py", encoding="utf-8").read())
-        exec(open("./MLReportsMod2025.py", encoding="utf-8").read())
+        print("Start: MLReportsMod2025.py")
+        exec(open("src/MLReportsMod2025.py", encoding="utf-8").read())
         return f"assets/AsNiML_Kurz.html" 
     
     elif input_value == "EDA-Report2025.py":
-        #print("Start: C:\\AW75\\AsniMed\\EDA-Report2025.py")
+        print("Start: EDA-Report2025.py")
         #exec(open("C:\AW75\AsniMed\EDAmodReport2025.py", encoding="utf-8").read())
         #/opt/render/project/src/MainAsni9.py", 
         exec(open("/opt/render/project/src/EDAmodReport2025.py", encoding="utf-8").read())
