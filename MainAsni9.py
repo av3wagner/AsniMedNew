@@ -256,7 +256,7 @@ MdFile="ASSETS/AWresumeF.md"
 MdAW="ASSETS/AWresume2025.md"
 Front="ASSETS/FrontSeite.md" 
 Asni="assets/ASNIKonzept.md"
-Literatur="ASSETS/TOC10+.md"
+Literatur="ASSETS/ArtikelList.md"
 File2="ASSETS/README05.md"
 File3="ASSETS/+Resume04.md"
 
