@@ -116,6 +116,14 @@ def Rmain(path_to_main):
         print(s, end="")
     proc.wait()
 
+def execute_python_file(file_path):
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            python_code = file.read()
+            exec(python_code)
+    except FileNotFoundError:
+        print(f"Error: The file '{file_path}' does not exist.")
+        
 import dash
 import dash_bootstrap_components as dbc
 import pandas as pd
@@ -596,16 +604,15 @@ def update_output_div(input_value):
 def update_output_div(input_value):
     print(input_value)
     if input_value == "ML-Reports2025.py":
-        #exec(open("C:\AW75\AsniMed\MLReportsMod2025.py", encoding="utf-8").read())
         print("Start: MLReportsMod2025.py")
-        exec(open("src/MLReportsMod2025.py", encoding="utf-8").read())
+        #exec(open("src/MLReportsMod2025.py", encoding="utf-8").read())
+        execute_python_file("MLReportsMod2025.py")
         return f"assets/AsNiML_Kurz.html" 
     
     elif input_value == "EDA-Report2025.py":
         print("Start: EDA-Report2025.py")
-        #exec(open("C:\AW75\AsniMed\EDAmodReport2025.py", encoding="utf-8").read())
         #/opt/render/project/src/MainAsni9.py", 
-        exec(open("/opt/render/project/src/EDAmodReport2025.py", encoding="utf-8").read())
+         execute_python_file("EDAmodReport2025.py")
         return f"assets/EDA_ChartFinal.html"  
          
     elif input_value == "ASNI-Reports2025.py":
