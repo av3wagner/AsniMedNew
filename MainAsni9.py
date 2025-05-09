@@ -267,9 +267,6 @@ def demo_explanation(File):
         html.Div([dcc.Markdown(demo_md, className="markdown")]),
         style={"margin": "20px"},
     )
-  
-#server = Flask(__name__) # define flask app.server
-#app = dash.Dash(__name__,server=server,)
 
 app = JupyterDash(external_stylesheets=[dbc.themes.SLATE])
 server = app.server
@@ -301,7 +298,6 @@ sidebar = html.Div(
 )
 
 dash._dash_renderer._set_react_version("18.2.0")
-#Dash._dash_renderer._set_react_version("18.2.0")
 content = html.Div(id="page-content", style=CONTENT_STYLE)
 app.title = "RK Asni-Med"
 app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
@@ -550,9 +546,9 @@ def render_page_content(pathname):
                 dcc.Dropdown(
                     id="input",
                     options=[
-                        {"label": "ML-Report",  "value": "C:\IPYNBgesamt2025\AsFenForum2025\ML-Reports2025.py"},
-                        {"label": "EDA-Report", "value": "C:\IPYNBgesamt2025\AsFenForum2025\EDA-Report2025.py"},
-                        {"label": "End-Report", "value": "C:\IPYNBgesamt2025\AsFenForum2025\ASNI-Reports2025.py"},
+                        {"label": "ML-Report",  "value": "ML-Reports2025.py"},
+                        {"label": "EDA-Report", "value": "EDA-Report2025.py"},
+                        {"label": "End-Report", "value": "ASNI-Reports2025.py"},
                     ], 
                     style={'width':'99.5%',"height": '40px',
                     'overflow-y':'auto', 'color': 'black', "font-size": "1.0rem",
@@ -645,12 +641,12 @@ def update_output_div(input_value):
 
 def update_output_div(input_value):
     print(input_value)
-    if input_value == "C:\IPYNBgesamt2025\AsFenForum2025\ML-Reports2025.py":
+    if input_value == "ML-Reports2025.py":
         #exec(open("C:\AW75\AsniMed\MLReportsMod2025.py", encoding="utf-8").read())
         exec(open("./MLReportsMod2025.py", encoding="utf-8").read())
         return f"assets/AsNiML_Kurz.html" 
     
-    elif input_value == "C:\IPYNBgesamt2025\AsFenForum2025\EDA-Report2025.py":
+    elif input_value == "EDA-Report2025.py":
         #print("Start: C:\\AW75\\AsniMed\\EDA-Report2025.py")
         #exec(open("C:\AW75\AsniMed\EDAmodReport2025.py", encoding="utf-8").read())
         #/opt/render/project/src/MainAsni9.py", 
