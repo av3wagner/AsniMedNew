@@ -256,7 +256,7 @@ MdFile="ASSETS/AWresumeF.md"
 MdAW="ASSETS/AWresume2025.md"
 Front="ASSETS/FrontSeite.md" 
 Asni="assets/ASNIKonzept.md"
-TOC="ASSETS/TOC10+.md"
+Literatur="ASSETS/TOC10+.md"
 File2="ASSETS/README05.md"
 File3="ASSETS/+Resume04.md"
 
@@ -448,7 +448,7 @@ def render_page_content(pathname):
            )), 
              
           html.Div(
-             [html.Div(id="demo-explanation", children=[demo_explanation(File1)])],
+             [html.Div(id="demo-explanation", children=[demo_explanation(Literatur)])],
                style={'width':'95.0%',"height": '1100px','display':'inline-block',
                       'overflow-y':'auto', 'color': 'yellow', "font-size": "1.4rem",
                       'marginLeft':50, 'vertical-align':'middle'},
