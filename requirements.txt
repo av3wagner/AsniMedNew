@@ -111,7 +111,7 @@ xhtml2pdf>=0.2.13
 XlsxWriter>=3.2.0
 dash_pdf
 lightgbm
-
+colorama
 #anaconda-navigator>=2.4.2
 #conda-repo-cli>=1.0.75
 #conda-verify>=3.4.2
