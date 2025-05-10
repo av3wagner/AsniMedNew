@@ -64,25 +64,25 @@ def execute_python_file(file_path):
 import time
 #path=os.path.join(cwd, "ImportBib.py")
 path = "ImportBib.py"
-print("pathBib: ", cwd)
+print("pathBib: ", path)
 execute_python_file(path)	
 time.sleep(2.0)
 
 path=os.path.join(cwd, "ConfigINI2025.py")
-print("pathConfig: ", cwd)
+print("pathConfig: ", path)
 execute_python_file(path)	
 import time
 time.sleep(2.0)
 
 path=os.path.join(cwd, "AsniDef.py")
-print("pathAsni: ", cwd)
+print("pathAsni: ", path)
 execute_python_file(path)	
 import time
 time.sleep(2.0)
 
 path=os.path.join(cwd, "AsNiDefFa2.py")
+print("pathAsni2: ", path)
 execute_python_file(path)	
-print("pathAsni2: ", cwd)
 import time
 time.sleep(2.0)
 
