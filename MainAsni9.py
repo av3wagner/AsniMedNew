@@ -120,7 +120,7 @@ def execute_python_file(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             python_code = file.read()
-            exec(python_code)
+            exec(python_code, globals())
     except FileNotFoundError:
         print(f"Error: The file '{file_path}' does not exist.")
         
@@ -611,7 +611,6 @@ def update_output_div(input_value):
     
     elif input_value == "EDA-Report2025.py":
         print("Start: EDA-Report2025.py")
-        #/opt/render/project/src/MainAsni9.py" 
         #"/opt/render/project/src/MainAsni9.py"
         execute_python_file("/opt/render/project/src/EDAmodReport2025.py")
         return f"assets/EDA_ChartFinal.html"  
