@@ -1,79 +1,88 @@
-#;;*****************************************************************;;;
-#;;*****************************************************************;;;
-#;;;****************************************************************;;;
-#;;;***  FIRMA          : PARADOX                                ***;;;
-#;;;***  Autor          : Alexander Wagner                       ***;;;
-#;;;***  STUDIEN-NAME   : AsNiFen/Phase II                       ***;;;
-#;;;***  STUDIEN-NUMMER :                                        ***;;;
-#;;;***  SPONSOR        :                                        ***;;;
-#;;;***  ARBEITSBEGIN   : 01.11.2023 / 25.08.2024                ***;;;
-#;;;****************************************************************;;;
-#;;;*--------------------------------------------------------------*;;;
-#;;;*---  PROGRAMM      :AsNiPa203.ipynb                       ---*;;;
-#;;;*---  Parent        : AsNiPa202.ipynb, 27.08.2024           ---*;;;
-#;;;*---  BESCHREIBUNG  : System                                ---*;;;
-#;;;*---                :                                       ---*;;;
-#;;;*---                :                                       ---*;;;
-#;;;*---  VERSION   VOM : 26.08.2024                            ---*;;;
-#;;;*--   KORREKTUR VOM : 04.09.2024                            ---*;;;
-#;;;*--                 :                                       ---*;;;
-#;;;*---  INPUT         :.INI                                   ---*;;;
-#;;;*---  OUTPUT        :                                       ---*;;;
-#;;;*--------------------------------------------------------------*;;;
-#;;;************************ Änderung ******************************;;;
-#;;;****************************************************************;;;
-#;;;  Wann              :               Was                        *;;;
-#;;;*--------------------------------------------------------------*;;;
-#;;;* 04.09.2024        : Komplett Code in einer Cell              *;;;
-#;;;* 27.08.2024        : #Funktioniert fehelefrei 10:24 Result:   *;;;
-#;;;*                   : #ASNI_ReportResultPa01_20240827OK.docx   *;;;
-#;;;****************************************************************;;;
-cwd = os.getcwd() 
+#https://docs.streamlit.io/deploy/streamlit-community-cloud/share-your-app/embed-your-app
+print("#;;*****************************************************************;;;")
+print("#;;*****************************************************************;;;")
+print("#;;;****************************************************************;;;")
+print("#;;;***  FIRMA          : PARADOX                                ***;;;")
+print("#;;;***  Autor          : Alexander Wagner                       ***;;;")
+print("#;;;***  STUDIEN-NAME   : AsNiFen                                ***;;;")
+print("#;;;***  STUDIEN-NUMMER :                                        ***;;;")
+print("#;;;***  SPONSOR        :                                        ***;;;")
+print("#;;;***  ARBEITSBEGIN   : 01.11.2023                             ***;;;")
+print("#;;;****************************************************************;;;")
+print("#;;;*--------------------------------------------------------------*;;;")
+print("#;;;*---  PROGRAMM      : ExecuteEDAmodReport2025Giti.pynb      ---*;;;")
+print("#;;;*---  Parent        : ExecuteEDAmodReport2025.ipynb         ---*;;;")
+print("#;;;*---  BESCHREIBUNG  : System                                ---*;;;")
+print("#;;;*---                :                                       ---*;;;")
+print("#;;;*---                :                                       ---*;;;")
+print("#;;;*---  VERSION   VOM : 31.05.2025                            ---*;;;")
+print("#;;;*--   KORREKTUR VOM : 10.04.2025                            ---*;;;")
+print("#;;;*--                 :                                       ---*;;;")
+print("#;;;*---  INPUT         :.INI, .Json, .CSV                      ---*;;;")
+print("#;;;*---  OUTPUT        :                                       ---*;;;")
+print("#;;;*--------------------------------------------------------------*;;;")
+print("#;;;************************ Änderung ******************************;;;")
+print("#;;;****************************************************************;;;")
+print("#;;;  Wann              :               Was                        *;;;")
+print("#;;;*--------------------------------------------------------------*;;;")
+print("#;;;* 23.03.2025        : Старт Модулей                            *;;;")
+print("#;;;* 10.05.2025        : Revision, Korrektur                      *;;;")
+print("#;;;****************************************************************;;;")
+
+from matplotlib import *
+from matplotlib.colors import ListedColormap
+import matplotlib
+import sys
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import plotly.express as px
+from matplotlib import pyplot as plt
+from matplotlib.colors import ListedColormap
+import seaborn as sns
+import os, sys, inspect, time, datetime
+from time import time, strftime, localtime
+from datetime import timedelta
+from copy import deepcopy
+from pathlib import Path
+import time
+import plotly.figure_factory as ff
+import pandas as pd
+import plotly.io as pio
+import xlsxwriter
+cwd=os.getcwd()
+os.chdir(cwd)
+print(cwd)
 
 def execute_python_file(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             python_code = file.read()
-            exec(python_code)
+            exec(python_code, globals())
     except FileNotFoundError:
         print(f"Error: The file '{file_path}' does not exist.")
 
-def RunEda():
-    import time
-    path=os.path.join(cwd, "ImportBib.py")
-    #exec(open(r"/ImportBib.py").read(), globals())
-    #exec(open(path).read(), globals())
-    execute_python_file(path)	
-    time.sleep(2.0)
+import time
+path=os.path.join(cwd, "ImportBib.py")
+execute_python_file(path)	
+time.sleep(2.0)
 
-    path=os.path.join(cwd, "ConfigINI2025.py")
-    #exec(open(r"/ConfigINI2025.py").read(), globals())
-    #exec(open(path).read(), globals())
-    execute_python_file(path)	
-    import time
-    time.sleep(2.0)
+path=os.path.join(cwd, "ConfigINI2025.py")
+execute_python_file(path)	
+import time
+time.sleep(2.0)
+path=os.path.join(cwd, "AsniDef.py")
+execute_python_file(path)	
+import time
+time.sleep(2.0)
 
-    path=os.path.join(cwd, "AsniDef.py")
-    #exec(open(r"/AsniDef.py").read(), globals())
-    #exec(open(path).read(), globals())
-    execute_python_file(path)	
-    import time
-    time.sleep(2.0)
-    
-    path=os.path.join(cwd, "AsNiDefFa2.py")
-    #exec(open(r"\AsNiDefFa2.py").read(), globals())
-    #exec(open(path).read(), globals())
-    execute_python_file(path)	
-    import time
-    time.sleep(2.0)
-    
-RunEda()
+path=os.path.join(cwd, "AsNiDefFa2.py")
+execute_python_file(path)	
+import time
+time.sleep(2.0)
 
 ########################## Test0.py #############################
 print("Start Step0!") 
-#Spire
-from spire.doc.common import *
-from spire.doc import *
 
 # Используемые стили
 HEADER_STYLE = "BoldHeader"
@@ -87,10 +96,23 @@ HEADER_LINK_STYLE = "BoldHeaderHyperlink"
 CONTENT_STYLE = "Content"
 CODE_STYLE = "Code"
 
+try:
+    raw_df = pd.read_csv('data/heart.csv')
+except:
+    raw_df = pd.read_csv('data/heart.csv')
+
+print(raw_df.head())  
+HDValues={
+    0:'Healthy',
+    1:'Heart Disease'
+    }
+
+df = raw_df.HeartDisease.replace(HDValues)
+df.info()
+print(df)
 
 ########################## Test1.py #############################
 #################################################################
-#%matplotlib inline 
 print("Start Test1!")
 pd.set_option("display.max_rows",None) 
 
@@ -916,9 +938,6 @@ ax[1].set_title(
 )
 plt.tight_layout()
 fig.savefig(pathIm + '/EDA52.png')
-print(" ")
-print(" ")
-print("Программа EDA-Report2025.py работу закончила")
 
 ######################### Test3.py ##############################
 print("Программа стартовала: ", timestart)
@@ -936,4 +955,3 @@ else:
 txt="Длительность работы программы: 00:" + str(t) + t2 
 print(txt)
 print("Программа EDA-Report2025.py работу закончила")
-
