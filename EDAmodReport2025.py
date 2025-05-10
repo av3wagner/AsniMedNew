@@ -51,7 +51,7 @@ import plotly.io as pio
 import xlsxwriter
 cwd=os.getcwd()
 os.chdir(cwd)
-print(cwd)
+print("cwd: ", cwd)
 
 def execute_python_file(file_path):
     try:
@@ -62,21 +62,27 @@ def execute_python_file(file_path):
         print(f"Error: The file '{file_path}' does not exist.")
 
 import time
-path=os.path.join(cwd, "ImportBib.py")
+#path=os.path.join(cwd, "ImportBib.py")
+path = "ImportBib.py"
+print("pathBib: ", cwd)
 execute_python_file(path)	
 time.sleep(2.0)
 
 path=os.path.join(cwd, "ConfigINI2025.py")
+print("pathConfig: ", cwd)
 execute_python_file(path)	
 import time
 time.sleep(2.0)
+
 path=os.path.join(cwd, "AsniDef.py")
+print("pathAsni: ", cwd)
 execute_python_file(path)	
 import time
 time.sleep(2.0)
 
 path=os.path.join(cwd, "AsNiDefFa2.py")
 execute_python_file(path)	
+print("pathAsni2: ", cwd)
 import time
 time.sleep(2.0)
 
