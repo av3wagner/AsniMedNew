@@ -540,6 +540,7 @@ def demo_explanation(File):
     )
 
 app = JupyterDash(external_stylesheets=[dbc.themes.SLATE])
+server = app.server
 sidebar = html.Div(
     [
         html.Div(
