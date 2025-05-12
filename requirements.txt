@@ -110,7 +110,7 @@ XlsxWriter>=3.2.0
 dash_pdf
 lightgbm
 colorama
-AppOpener
+#AppOpener
 #warnings
 cufflinks
 configparser
