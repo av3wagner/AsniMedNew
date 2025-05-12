@@ -111,7 +111,7 @@ dash_pdf
 lightgbm
 colorama
 AppOpener
-warnings
+#warnings
 cufflinks
 configparser
 
