@@ -30,20 +30,24 @@ print("#;;;* 11.05.2025        : New-Progtam                              *;;;")
 print("#;;;****************************************************************;;;")
 
 import os, sys, inspect, time, datetime
-import dash
-import dash_bootstrap_components as dbc
-from dash import Input, Output, dcc, html
 import pandas as pd
 import numpy as np
-import sqlite3
+import dash_pdf
+from dash import Dash, html, dcc, Input, Output, State
+import dash_ag_grid as dag
+import dash_bootstrap_components as dbc
 import dash
 from dash import dash_table
-from dash import dcc
-#from dash import html
-import dash_bootstrap_components as dbc
-#import dash_html_components as html
-from dash.dependencies import Input, Output
 from dash import Dash, dcc, html, Input, Output, State, callback
+
+#import sqlite3
+#import dash_html_components as html
+#from dash.dependencies import Input, Output
+#from dash import Dash, dcc, html, callback, Input, Output
+#from dash import Input, Output, dcc, html
+#from prophet import Prophet
+#import os, sys, inspect, time, datetime
+
 import plotly.express as px
 import plotly.graph_objects as go
 import chart_studio.plotly as py 
@@ -52,11 +56,9 @@ import flask
 import json
 import requests
 from urllib.request import urlopen
-from prophet import Prophet
 from pandas_datareader import data, wb
 import base64
 
-import os, sys, inspect, time, datetime
 import subprocess
 import json
 from time import time, strftime, localtime
@@ -66,17 +68,12 @@ import shutil
 from subprocess import Popen, PIPE, STDOUT
 import sys
 import webbrowser
-import pandas as pd
 from configparser import ConfigParser
 import streamlit as st
 import matplotlib.pyplot as plt
 from IPython.display import IFrame
 
-from dash import Dash, dcc, html, callback, Input, Output
-import dash_bootstrap_components as dbc
 import plotly.express as px
-import dash_ag_grid as dag
-import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.model_selection import train_test_split
@@ -84,8 +81,7 @@ from sklearn.metrics import accuracy_score
 import time
 import psutil
 #from AppOpener import close
-import dash_pdf
-from dash import Dash, html, dcc, Input, Output, State
+
 
 from matplotlib import *
 from matplotlib.colors import ListedColormap
@@ -96,7 +92,7 @@ import seaborn as sns
 import os, sys, inspect, time, datetime
 from time import time, strftime, localtime
 from datetime import timedelta
-#from copy import deepcopy
+
 from pathlib import Path
 import time
 import plotly.figure_factory as ff
@@ -107,13 +103,15 @@ import plotly.graph_objects as go
 import plotly.offline
 import plotly.offline as po
 import cufflinks as cf
-#import warnings
 import patchworklib as pw
 from plotly.subplots import make_subplots
 from plotly import tools
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 import xlsxwriter
+
+#import warnings
 #from configparser import ConfigParser
+#from copy import deepcopy
 
 cwd=os.getcwd()
 os.chdir(cwd)
