@@ -275,8 +275,8 @@ pio.write_image(fig, pathIm + '/EDA7.png', width=1200, height=800, format='png',
 
 cf.go_offline()
 cf.set_config_file(offline=True, world_readable=True)
-warnings.filterwarnings('ignore')
-warnings.warn("this will not show")
+#warnings.filterwarnings('ignore')
+#warnings.warn("this will not show")
 plt.rcParams["figure.figsize"] = (10,6)
 pd.set_option('max_colwidth',200)
 pd.set_option('display.max_columns', 200)
