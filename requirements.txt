@@ -113,6 +113,7 @@ colorama
 cufflinks
 configparser
 patchworklib
+kaleido
 
 #datapane
 #datashape>=0.5.4
