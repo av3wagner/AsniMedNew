@@ -39,9 +39,9 @@ import sqlite3
 import dash
 from dash import dash_table
 from dash import dcc
-from dash import html
+#from dash import html
 import dash_bootstrap_components as dbc
-import dash_html_components as html
+#import dash_html_components as html
 from dash.dependencies import Input, Output
 from dash import Dash, dcc, html, Input, Output, State, callback
 import plotly.express as px
@@ -96,7 +96,7 @@ import seaborn as sns
 import os, sys, inspect, time, datetime
 from time import time, strftime, localtime
 from datetime import timedelta
-from copy import deepcopy
+#from copy import deepcopy
 from pathlib import Path
 import time
 import plotly.figure_factory as ff
@@ -107,7 +107,7 @@ import plotly.graph_objects as go
 import plotly.offline
 import plotly.offline as po
 import cufflinks as cf
-import warnings
+#import warnings
 import patchworklib as pw
 from plotly.subplots import make_subplots
 from plotly import tools
