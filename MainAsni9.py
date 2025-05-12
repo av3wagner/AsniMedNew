@@ -532,7 +532,7 @@ File2="assets/README05.md"
 File3="assets/+Resume04.md"
 
 def demo_explanation(Filex):
-    with open(File, "r", encoding="utf-8") as file:    
+    with open(Filex, "r", encoding="utf-8") as file:    
         demo_md = file.read()
     return html.Div(
         html.Div([dcc.Markdown(demo_md, className="markdown")]),
