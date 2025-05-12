@@ -111,6 +111,8 @@ dash_pdf
 lightgbm
 colorama
 AppOpener
+Warning
+
 #datapane
 #datashape>=0.5.4
 #anaconda-navigator>=2.4.2
