@@ -26,8 +26,6 @@ dash-table-experiments>=0.6.0
 dash-template-rendering>=0.0.1b5
 dash-tools
 dash_ag_grid>=31.0.1
-#datapane
-#datashape>=0.5.4
 docx>=0.2.4
 docx2pdf>=0.1.8
 docxcompose>=1.4.0
@@ -113,6 +111,8 @@ dash_pdf
 lightgbm
 colorama
 AppOpener
+#datapane
+#datashape>=0.5.4
 #anaconda-navigator>=2.4.2
 #conda-repo-cli>=1.0.75
 #conda-verify>=3.4.2
