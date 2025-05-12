@@ -110,10 +110,9 @@ XlsxWriter>=3.2.0
 dash_pdf
 lightgbm
 colorama
-#AppOpener
-#warnings
 cufflinks
 configparser
+patchworklib
 
 #datapane
 #datashape>=0.5.4
