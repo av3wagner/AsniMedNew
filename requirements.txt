@@ -115,6 +115,7 @@ configparser
 patchworklib
 kaleido
 
+streamlit
 toml
 seaborn
 matplotlib
