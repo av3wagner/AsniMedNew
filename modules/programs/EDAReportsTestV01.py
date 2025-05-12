@@ -83,7 +83,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import time
 import psutil
-from AppOpener import close
+#from AppOpener import close
 import dash_pdf
 from dash import Dash, html, dcc, Input, Output, State
 
