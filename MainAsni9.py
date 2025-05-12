@@ -522,14 +522,14 @@ def b64_image(image_filename):
         image = f.read()
     return 'data:image/png;base64,' + base64.b64encode(image).decode('utf-8')
 
-File1="ASSETS/ArtikelList.md"
-MdFile="ASSETS/AWresumeF.md"
-MdAW="ASSETS/AWresume2025.md"
-Front="ASSETS/FrontSeite.md" 
+File1="assets/ArtikelList.md"
+MdFile="assets/AWresumeF.md"
+MdAW="assets/AWresume2025.md"
+Front="assets/FrontSeite.md" 
 Asni="assets/ASNIKonzept.md"
-TOC="ASSETS/TOC10+.md"
-File2="ASSETS/README05.md"
-File3="ASSETS/+Resume04.md"
+TOC="assets/TOC10+.md"
+File2="assets/README05.md"
+File3="assets/+Resume04.md"
 
 def demo_explanation(File):
     with open(File, "r", encoding="utf-8") as file:    
