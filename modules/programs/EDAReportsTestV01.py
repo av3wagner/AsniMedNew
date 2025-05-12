@@ -374,7 +374,7 @@ for indx, (column, axes) in list(enumerate(list(zip(num, ax.flatten())))):
     sns.histplot(ax = axes, x = df[column], hue = df['HeartDisease'], 
                  palette = 'magma', alpha = 0.8, multiple = 'stack')
     
-    legend = axes.get_legend() # sns.hisplot has some issues with legend
+    legend = axes.get_legend() 
     handles = legend.legendHandles
     legend.remove()
     axes.legend(handles, ['0', '1'], title = 'HeartDisease', loc = 'upper right')
