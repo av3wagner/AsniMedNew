@@ -113,13 +113,13 @@ from plotly.subplots import make_subplots
 from plotly import tools
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 import xlsxwriter
-from configparser import ConfigParser
+#from configparser import ConfigParser
 
 cwd=os.getcwd()
 os.chdir(cwd)
 print(cwd)
 pfad=cwd 
-pathIm = 'C:/Temp'
+pathIm = 'assets/image'
 print("pathIm: ", pathIm) 
 
 now=datetime.datetime.now()
