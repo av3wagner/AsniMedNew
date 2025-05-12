@@ -111,7 +111,9 @@ dash_pdf
 lightgbm
 colorama
 AppOpener
-Warning
+warnings
+cufflinks
+configparser
 
 #datapane
 #datashape>=0.5.4
