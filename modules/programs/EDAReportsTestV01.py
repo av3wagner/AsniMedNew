@@ -39,15 +39,6 @@ import dash_bootstrap_components as dbc
 import dash
 from dash import dash_table
 from dash import Dash, dcc, html, Input, Output, State, callback
-
-#import sqlite3
-#import dash_html_components as html
-#from dash.dependencies import Input, Output
-#from dash import Dash, dcc, html, callback, Input, Output
-#from dash import Input, Output, dcc, html
-#from prophet import Prophet
-#import os, sys, inspect, time, datetime
-
 import plotly.express as px
 import plotly.graph_objects as go
 import chart_studio.plotly as py 
@@ -81,8 +72,6 @@ from sklearn.metrics import accuracy_score
 import time
 import psutil
 #from AppOpener import close
-
-
 from matplotlib import *
 from matplotlib.colors import ListedColormap
 import matplotlib
@@ -92,7 +81,6 @@ import seaborn as sns
 import os, sys, inspect, time, datetime
 from time import time, strftime, localtime
 from datetime import timedelta
-
 from pathlib import Path
 import time
 import plotly.figure_factory as ff
@@ -108,10 +96,7 @@ from plotly.subplots import make_subplots
 from plotly import tools
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 import xlsxwriter
-
-#import warnings
-#from configparser import ConfigParser
-#from copy import deepcopy
+import warnings
 
 cwd=os.getcwd()
 os.chdir(cwd)
