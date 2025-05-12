@@ -96,7 +96,7 @@ from plotly.subplots import make_subplots
 from plotly import tools
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 import xlsxwriter
-import warnings
+#import warnings
 
 cwd=os.getcwd()
 os.chdir(cwd)
